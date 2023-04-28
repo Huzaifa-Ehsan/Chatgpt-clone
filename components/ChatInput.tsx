@@ -5,6 +5,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
+import { toast } from "react-hot-toast";
 
 type Props = {
   chatId: string;
@@ -14,6 +15,9 @@ const ChatInput = ({ chatId }: Props) => {
   const [propmt, setPrompt] = useState("");
   const { data: session } = useSession();
   // console.log(session)
+
+  //TODO useSWR to get modal
+  const model = "text-davinci-003";
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,9 +39,36 @@ const ChatInput = ({ chatId }: Props) => {
     // console.log(message)
 
     await addDoc(
-      collection(db, "users", session?.user?.email!, "chats", chatId, "messages"),
+      collection(
+        db,
+        "users",
+        session?.user?.email!,
+        "chats",
+        chatId,
+        "messages"
+      ),
       message
     );
+    // Toast Notification to say loading!
+    const notification = toast.loading("ChatGPT is thinking...");
+
+    await fetch("/api/askQuestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: input,
+        chatId,
+        model,
+        session,
+      }),
+    }).then(() => {
+      // Toast Notification to say successful!
+      toast.success("ChatGPT is responded!", {
+        id: notification,
+      });
+    });
   };
   return (
     <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">

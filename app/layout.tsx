@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Login from "@/components/Login";
 import { getServerSession } from "next-auth";
 import Providers from "@/components/Providers";
+import ClientProvider from "@/components/ClientProvider";
 // import { Providers } from "@/components/Providers";
 
 export const metadata = {
@@ -23,14 +24,15 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body>
-        <Providers session={session} >
+        <Providers session={session}>
           {!session ? (
             <Login />
           ) : (
             <div className="flex">
               <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem] ">
-                <SideBar/>
+                <SideBar />
               </div>
+              <ClientProvider />
               <div className="bg-[#343541] flex-1">{children}</div>
             </div>
           )}
