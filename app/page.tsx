@@ -7,10 +7,10 @@ import {
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center h-screen text-white px-2">
-      <h1 className="text-5xl font-bold mb-20">ChatGPT</h1>
-      <div className="flex text-center space-x-2">
-        <div>
-          <div className="flex flex-col items-center justify-center mb-5">
+      <h1 className="text-4xl font-bold mb-10 pt-4">ChatGPT</h1>
+      <div className="overflow-auto w-full text-center items-center flex flex-col pb-8 lg:flex-row lg:justify-evenly lg:space-x-2  ">
+        <div className="mb-5">
+          <div className="flex flex-col items-center justify-center">
             <SunIcon className="h-8 w-8" />
             <h2>Examples</h2>
           </div>
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-5">
           <div className="flex flex-col items-center justify-center mb-5">
             <BoltIcon className="h-8 w-8" />
             <h2>Capabilities</h2>
