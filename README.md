@@ -6,9 +6,15 @@ ChatGPT is a powerful conversational AI assistant that is built on top of the st
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## First, install all dependencies
+
+yarn install
+# or
+npm install
 ## Getting Started
 
-First, run the development server:
+Then, run the development server:
+https://user-images.githubusercontent.com/113031136/235341488-675fb872-3e39-4537-aee8-8f026f680e93.png
 
 ```bash
 npm run dev
