@@ -49,6 +49,32 @@ Go to firebase > Project Overview > Project Setting Generate new private key aut
 
 ![env file](https://user-images.githubusercontent.com/113031136/235343338-6ba46f3b-c969-4460-bfda-a1086e1b5c1b.jpg)
 
+
+## Sign-in 
+When you try sign-in show this required confirmation from google cloud.So, click on error details
+
+![Need google auth](https://user-images.githubusercontent.com/113031136/235359372-ffe1f7d5-d12e-4c62-8b72-0a0296432b2e.jpg)
+
+Copy this url:
+
+![copy url](https://user-images.githubusercontent.com/113031136/235359462-de5f21fe-6de0-480f-949e-50c7496c8b27.jpg)
+
+Go to google cloud than into your project than go to API & Services in which Credentials than go to OAuth 2.0 Client IDs
+
+![google cloud](https://user-images.githubusercontent.com/113031136/235359045-ee190319-858f-485f-987a-eef9b2ec332d.jpg)
+
+![url](https://user-images.githubusercontent.com/113031136/235359741-c82ffad1-f0d2-41b7-b063-d51f8338a787.jpg)
+
+In Authorized JavaScript origins
+## ADD URL
+http://localhost:3000
+
+In Authorized redirect URIs
+## ADD URL
+which you copied here:
+
+![paste](https://user-images.githubusercontent.com/113031136/235359976-69ef26a8-35f2-4701-86e4-fd87f2e9fdb6.jpg)
+
 ## Preview Project 
 
 ![chatgpt](https://user-images.githubusercontent.com/113031136/235343569-d7efd6a8-5529-4e23-81d8-a52a9f54462c.jpg) 
