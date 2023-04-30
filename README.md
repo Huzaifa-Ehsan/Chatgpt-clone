@@ -56,10 +56,6 @@ Go to firebase > Project Overview > Project Setting Generate new private key aut
 ![chatgpt 2](https://user-images.githubusercontent.com/113031136/235343586-ba86bba5-fe85-41b6-a150-c6c42cb452f6.jpg) 
 ![chatgpt 3](https://user-images.githubusercontent.com/113031136/235343592-0faeb34a-df57-485e-83e0-ff0b5fb1f83b.jpg)
 
-## Live preview on Vercel
-
-https://chatgpt-clone-murex.vercel.app/
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -74,3 +70,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Live preview on Vercel
+
+https://chatgpt-clone-murex.vercel.app/
