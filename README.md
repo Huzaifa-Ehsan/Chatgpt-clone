@@ -11,10 +11,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 yarn install
 # or
 npm install
-## Getting Started
 
 Then, run the development server:
-https://user-images.githubusercontent.com/113031136/235341488-675fb872-3e39-4537-aee8-8f026f680e93.png
 
 ```bash
 npm run dev
