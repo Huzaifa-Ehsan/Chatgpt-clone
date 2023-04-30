@@ -1,3 +1,9 @@
+#Project
+
+ChtaGPT-clone
+
+ChatGPT is a powerful conversational AI assistant that is built on top of the state-of-the-art GPT-3.5 language model. With the ability to understand natural language queries, ChatGPT can provide helpful responses to a wide range of topics, including general knowledge, personal productivity, entertainment, and more.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
