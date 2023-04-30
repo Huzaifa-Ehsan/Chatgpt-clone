@@ -56,6 +56,10 @@ Go to firebase > Project Overview > Project Setting Generate new private key aut
 ![chatgpt 2](https://user-images.githubusercontent.com/113031136/235343586-ba86bba5-fe85-41b6-a150-c6c42cb452f6.jpg) 
 ![chatgpt 3](https://user-images.githubusercontent.com/113031136/235343592-0faeb34a-df57-485e-83e0-ff0b5fb1f83b.jpg)
 
+## Live preview on Vercel
+
+https://chatgpt-clone-murex.vercel.app/
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
