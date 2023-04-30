@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-10 pt-4">ChatGPT</h1>
       <div className="overflow-auto w-full text-center items-center flex flex-col pb-8 lg:flex-row lg:justify-evenly lg:space-x-2  ">
         <div className="mb-5">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mb-5">
             <SunIcon className="h-8 w-8" />
             <h2>Examples</h2>
           </div>
