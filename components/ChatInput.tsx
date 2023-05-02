@@ -18,11 +18,12 @@ const ChatInput = ({ chatId }: Props) => {
   const { data: session } = useSession();
   // console.log(session)
 
+  // useSWR to get modal
+  // const model = "text-davinci-003";
+
   const { data: model } = useSWR("model", {
     fallbackData: "text-davinci-003",
   });
-  //TODO useSWR to get modal
-  // const model = "text-davinci-003";
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +44,8 @@ const ChatInput = ({ chatId }: Props) => {
     };
     // console.log(message)
 
+    /* SEND to Database */
+
     await addDoc(
       collection(
         db,
@@ -54,8 +57,11 @@ const ChatInput = ({ chatId }: Props) => {
       ),
       message
     );
+
     // Toast Notification to say loading!
     const notification = toast.loading("ChatGPT is thinking...");
+
+    /* Fetch method to the backend */
 
     await fetch("/api/askQuestion", {
       method: "POST",
@@ -96,8 +102,7 @@ const ChatInput = ({ chatId }: Props) => {
       </form>
       {/* ModelSelection */}
       <div className="md:hidden">
-        {" "}
-        <ModelSelection />{" "}
+        <ModelSelection />
       </div>
     </div>
   );

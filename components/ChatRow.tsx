@@ -24,7 +24,6 @@ function ChatRow({ id }: Props) {
     collection(db, "users", session?.user?.email!, "chats", id, "messages")
   );
 
-  // console.log(messages?.docs[messages.docs.length -1].data().text);
 
   const deleteRow = async () => {
     await deleteDoc(doc(db, "users", session?.user?.email!, "chats", id));

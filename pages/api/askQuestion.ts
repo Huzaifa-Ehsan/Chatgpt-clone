@@ -23,10 +23,12 @@ export default async function handler(
   }
 
   // ChatGPT Querry
-  const response = await query(prompt, chatId, model);
+
+  const response = await query(prompt, model);
 
   const message: Message = {
     text: response || "ChatGPT was unable to find answer for that!",
+    // at this point create firebaseAdmin
     createdAt: admin.firestore.Timestamp.now(),
     user: {
       _id: "ChatGPT",
@@ -34,7 +36,7 @@ export default async function handler(
       avatar: "https://links.papareact.com/89k",
     },
   };
-
+  // v8 approach
   await adminDB
     .collection("users")
     .doc(session?.user?.email)
