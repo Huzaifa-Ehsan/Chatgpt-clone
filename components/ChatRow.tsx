@@ -31,20 +31,18 @@ function ChatRow({ id }: Props) {
     router.replace("/");
   };
 
-  
-
   return (
     <Link
       href={`/chat/${id}`}
       className={`chatRow ${active && "bg-gray-700/50"}`}
     >
-      <ChatBubbleLeftIcon className="w-12 h-6 xs:h-5 xs:w-5 " />
+      <ChatBubbleLeftIcon className="w-7 h-5 xs:w-5 xs:h-5" />
       <p className="flex-1 hidden md:inline-flex truncate">
         {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
       </p>
       <TrashIcon
         onClick={deleteRow}
-        className=" w-12 h-6 xs:h-5 xs:w-5 text-gray-700 hover:text-red-700 "
+        className="w-7 h-5 xs:h-5 xs:w-5 text-gray-700 hover:text-red-700 "
       />
     </Link>
   );

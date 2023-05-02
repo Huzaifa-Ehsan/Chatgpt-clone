@@ -78,20 +78,6 @@ const SideBar = () => {
 
       {session && (
         <>
-          <div
-            onClick={deleteAllRows}
-            className="border-gray-700 border chatRow my-2"
-          >
-            <XMarkIcon className="w-12 h-6 xs:h-5 xs:w-5 text-gray-400" />
-            <button className="text-gray-300">Delete Chats</button>
-          </div>
-          <div
-            onClick={logoutHandler}
-            className="border-gray-700 border chatRow mb-4"
-          >
-            <ArrowLeftOnRectangleIcon className="w-12 h-6 xs:h-5 xs:w-5 text-gray-400" />
-            <button className="text-gray-300">Logout?</button>
-          </div>
           <picture>
             <img
               className="h-12 w-12 my-2 rounded-full mx-auto cursor-pointer hover:opacity-50"
@@ -99,6 +85,20 @@ const SideBar = () => {
               alt="Profile Image"
             />
           </picture>
+          <div
+            onClick={deleteAllRows}
+            className="border-gray-700 border chatRow my-2"
+          >
+            <XMarkIcon className="hidden sm:inline-flex sm:h-5 sm:w-5 text-gray-400" />
+            <button className="text-gray-300">Delete Chats?</button>
+          </div>
+          <div
+            onClick={logoutHandler}
+            className="border-gray-700 border chatRow mb-4"
+          >
+            <ArrowLeftOnRectangleIcon className="hidden sm:inline-flex sm:h-5 sm:w-5 text-gray-400" />
+            <button className="text-gray-300">Logout?</button>
+          </div>
         </>
       )}
     </div>
