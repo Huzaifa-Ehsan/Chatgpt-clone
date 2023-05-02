@@ -5,7 +5,6 @@ import { getServerSession } from "next-auth";
 import Providers from "@/components/Providers";
 import ClientProvider from "@/components/ClientProvider";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-// import { Providers } from "@/components/Providers";
 
 export const metadata = {
   title: "ChatGPT",
@@ -20,7 +19,6 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   const session = await getServerSession(authOptions);
 
-  // console.log(session);
   return (
     <html lang="en">
       <body>

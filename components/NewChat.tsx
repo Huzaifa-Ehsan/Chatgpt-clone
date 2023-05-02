@@ -8,10 +8,19 @@ import { useRouter } from "next/navigation";
 
 const NewChat = () => {
   const { data: session } = useSession();
-  // console.log(session);
   const router = useRouter();
 
   const createNewChat = async () => {
+    /*addDoc() > Add a new document to specified CollectionReference with the given data, assigning it a document ID automatically. 
+    First argument is the path:   collection(db, "users", session?.user?.email!, "chats")
+    Second argument is the actual data itself: 
+    {
+        userId: session?.user?.email!,
+        createdAt: serverTimestamp(),
+      }
+    collection() > Gets a CollectionReference instance that refers to the collection at the specified absolute path.
+    */
+
     const doc = await addDoc(
       collection(db, "users", session?.user?.email!, "chats"),
       {
@@ -19,7 +28,7 @@ const NewChat = () => {
         createdAt: serverTimestamp(),
       }
     );
-    router.push(`/chat/${doc.id}`);
+    router.push(`/chat/${doc.id}`); 
   };
   return (
     <div onClick={createNewChat} className="border-gray-700 border chatRow">

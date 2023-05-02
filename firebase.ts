@@ -12,8 +12,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+
+/*It is ok simple react app because there will no several occurences would be occur
+ const app = initializeApp(firebaseConfig); */
+
+/*Next.js Approach >  getApps() it will tell us all the initialized apps */
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+
+/* This is modular v9 approach */
 const db = getFirestore(app);
 
 export { db };
