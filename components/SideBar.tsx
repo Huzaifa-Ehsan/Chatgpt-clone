@@ -6,7 +6,6 @@ import NewChat from "./NewChat";
 import {
   collection,
   deleteDoc,
-  doc,
   getDocs,
   orderBy,
   query,
@@ -15,7 +14,10 @@ import { db } from "@/firebase";
 import ChatRow from "./ChatRow";
 import ModelSelection from "./ModelSelection";
 import { useRouter } from "next/navigation";
-import { TrashIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLeftOnRectangleIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 const SideBar = () => {
   const { data: session } = useSession();
@@ -78,20 +80,21 @@ const SideBar = () => {
         <>
           <div
             onClick={deleteAllRows}
-            className="border-gray-700 border chatRow mb-2"
+            className="border-gray-700 border chatRow my-2"
           >
-            <TrashIcon className=" w-12 h-6 xs:h-5 xs:w-5 text-gray-300 hover:text-black " />
+            <XMarkIcon className="w-12 h-6 xs:h-5 xs:w-5 text-gray-400" />
             <button className="text-gray-300">Delete Chats</button>
           </div>
           <div
             onClick={logoutHandler}
-            className="border-gray-700 border chatRow mb-7"
+            className="border-gray-700 border chatRow mb-4"
           >
+            <ArrowLeftOnRectangleIcon className="w-12 h-6 xs:h-5 xs:w-5 text-gray-400" />
             <button className="text-gray-300">Logout?</button>
           </div>
           <picture>
             <img
-              className="h-12 w-12 rounded-full mx-auto cursor-pointer hover:opacity-50"
+              className="h-12 w-12 my-2 rounded-full mx-auto cursor-pointer hover:opacity-50"
               src={session?.user?.image!}
               alt="Profile Image"
             />
