@@ -13,7 +13,3 @@ const Providers = ({ children, session }: Props) => {
 };
 
 export default Providers;
-
-// export function Providers({ children }: Props) {
-//   return <SessionProvider>{children}</SessionProvider>;
-// }

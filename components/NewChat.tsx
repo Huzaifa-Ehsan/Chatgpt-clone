@@ -28,7 +28,7 @@ const NewChat = () => {
         createdAt: serverTimestamp(),
       }
     );
-    router.push(`/chat/${doc.id}`); 
+    router.push(`/chat/${doc.id}`);
   };
   return (
     <div onClick={createNewChat} className="border-gray-700 border chatRow">

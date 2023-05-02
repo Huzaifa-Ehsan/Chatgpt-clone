@@ -16,7 +16,6 @@ type Props = {
 const ChatInput = ({ chatId }: Props) => {
   const [propmt, setPrompt] = useState("");
   const { data: session } = useSession();
-  // console.log(session)
 
   // useSWR to get modal
   // const model = "text-davinci-003";
@@ -42,7 +41,6 @@ const ChatInput = ({ chatId }: Props) => {
           `https://ui-avatars.com/api/?name=${session?.user?.name}`,
       },
     };
-    // console.log(message)
 
     /* SEND to Database */
 

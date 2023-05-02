@@ -39,7 +39,6 @@ function Chat({ chatId }: Props) {
       )}
 
       {messages?.docs.map((message) => {
-        // console.log(message.data())
         return <Message key={message.id} message={message.data()} />;
       })}
     </div>
