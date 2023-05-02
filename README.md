@@ -3,7 +3,8 @@
 
 ## ChtaGPT-clone
 
-ChatGPT is a powerful conversational AI assistant that is built on top of the state-of-the-art GPT-3.5 language model. With the ability to understand natural language queries, ChatGPT can provide helpful responses to a wide range of topics, including general knowledge, personal productivity, entertainment, and more.
+The GPT-3 (Generative Pre-trained Transformer 3) language model is one of the most powerful natural language processing models available today, and the Text-Davinci-003 model is one of the largest and most capable variants of GPT-3. Developed by OpenAI.
+
 
  This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
 
@@ -81,6 +82,10 @@ which you copied here:
 ![chatgpt 1](https://user-images.githubusercontent.com/113031136/235343579-c40d2c7e-327a-4abe-b22a-ec8e4f870ed4.jpg) 
 ![chatgpt 2](https://user-images.githubusercontent.com/113031136/235343586-ba86bba5-fe85-41b6-a150-c6c42cb452f6.jpg) 
 ![chatgpt 3](https://user-images.githubusercontent.com/113031136/235343592-0faeb34a-df57-485e-83e0-ff0b5fb1f83b.jpg)
+
+## After some modifications
+
+![updated](https://user-images.githubusercontent.com/113031136/235658310-38e380e0-0388-44de-a039-b3a598aaf166.jpg)
 
 ## Learn More
 
