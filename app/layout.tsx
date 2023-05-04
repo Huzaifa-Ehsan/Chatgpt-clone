@@ -16,7 +16,6 @@ type Props = {
 };
 export default async function RootLayout({ children }: Props) {
   const session = await getServerSession(authOptions);
-
   return (
     <html lang="en">
       <body>
